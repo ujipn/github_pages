@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link rel="stylesheet" href="css/style.css">
+       <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class=pics>
+        <img src="js_kadai/img/nakajima.jpg" alt="">
+        <img src="js_kadai/img/katuo_sozai_03.jpg" alt="">
+        <img src="js_kadai/img/katuo_vs_nakajima.jpg" alt=""> 
+        <img src="js_kadai/img/katuo_sozai_04.jpg" alt="">
+        <img src="js_kadai/img/nakajima_sozai_01.jpg" alt="">
+        <img src="js_kadai/img/nakajima.jpg" alt="">
+        <img src="js_kadai/img/katuo_sozai_03.jpg" alt="">
+        <img src="js_kadai/img/katuo_vs_nakajima.jpg" alt=""> 
+        <img src="js_kadai/img/katuo_sozai_04.jpg" alt="">
+        <img src="js_kadai/img/nakajima_sozai_01.jpg" alt="">
+    </div>
+    
+<h1>中島くんと一緒に野球バトル！</h1>
+
+    <div class="button-container">
+        <button class="select-button" data-value="ストレート">ストレート</button>
+        <button class="select-button" data-value="カーブ">カーブ</button>
+        <button class="select-button" data-value="見送る">見送る</button>
+    </div>
+
+     
+    <div id="computerSelection" class="computer-selection"></div>
+
+    <div class="pic-count-container">
+    <div class="picposition">
+        <img class="pic" src="js_kadai/img/katuo_sozai_07.jpg" alt=""> 
+        <div id="result" class="result"></div>
+    </div>
+
+      
+  
+<div class="count">
+    <div id="strikeCount">
+        <div >Strike</div>
+        <div class="circle" id="strikeCircle"></div>
+        <div class="circle" id="strikeCircle"></div>
+    </div>
+    <div id="ballCount">
+        <div >Ball</div>
+        <div class="circle" id="ballCircle"></div>
+        <div class="circle" id="ballCircle"></div>
+        <div class="circle" id="ballCircle"></div>
+    </div>
+    <div id="outCount">
+        <div >Out</div>
+        <div class="circle" id="outCircle"></div>
+        <div class="circle" id="outCircle"></div>
+    </div>
+</div>
+</div>
+    
+<div class="score-container">
+    <div id="score">得点: 0</div>
+    <div id="runners">ランナー: 0</div>
+</div>
+ 
+
+<div>
+    <h2>＜攻略法＞</h2>
+<ul>＊＊＊相手の球種は「ストレート」「カーブ」「フォーク」の3種類＊＊＊
+
+<li>球種が一致した場合は、</li>
+<p>ヒットになり、ランナーが進みます</p>
+<p>※ストレートだと、20%の確率でホームラン</p>
+<p>※カーブだと、　　40%の確率でホームラン</p>
+
+<li>球種が外れた場合</li>
+<p>・ストレートを選択して</p>
+<p>　相手がカーブだったら、</p>
+<p>　20%の確率でヒット、20%の確率で空振り、その他は内野ゴロ</p>
+
+<p>　相手がフォークだったら、</p>
+<p>　100%の確率でストライク</p>
+
+<p>・カーブを選択して</p>
+<p>　相手がストレートだったら、</p>
+<p>　100%の確率でストライク</p>
+
+<p>　相手がフォークだったら、</p>
+<p>　60%の確率で空振り、その他は内野ゴロ</p>
+
+<p>・ストレートを選択して相手がフォークだと、</p>
+<p>　100%の確率でストライク</p>
+
+<li>見送るを選択すると、</li>
+<p>　相手がストレートだったら、ストライク</p>
+<p>　それ以外は80%の確率でボールだよ</p>
+
+
+
+
+</div>
+
+
+    <audio id="audio_top" src="audio/audio_ending.mp3" autoplay></audio>
+
+    <div class="button-container-right">
+    <button class="resetButton">リセット</button>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <!-- jsを紐づける -->
+       <script src="js_kadai/yakyu.js"></script>
+</body>
+</html>

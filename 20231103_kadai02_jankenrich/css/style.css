@@ -1,0 +1,145 @@
+body {
+    font-family: "Hannari";
+    min-height: 100vh;
+    max-width: 600px;
+    background-color: papayawhip; 
+    margin: 0 auto;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+
+.computer-selection{
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.result{
+    font-size: 24px;
+    font-weight: bold;
+   
+}
+
+button{
+    display: inline-block; /* ボタンを横に並べる */
+    margin: 0 10px; /* 左右に10pxの間隔を開ける */
+    padding: 10px 20px; /* ボタンの内側の余白を設定 */
+    background-color: #3498db; /* 背景色を指定 */
+    color: #fff; /* テキストの色を指定 */
+    border: none; /* ボーダーを削除 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    font-size: 16px; /* フォントサイズを指定 */
+    cursor: pointer; /* カーソルをポインターに変更 */
+}
+
+button:hover {
+	top:-3px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    text-align: center; /* ボタンを水平方向に中央に配置 */
+}
+
+.button-container-right{
+    display: flex;
+    justify-content: right; /* 水平方向の中央寄せ */
+    margin: 30px;
+}
+
+.pic-count-container {
+    display: flex; /* 子要素を水平に並べる */
+    align-items: center; /* 垂直方向に中央揃え */
+    justify-content: center; /* 水平方向に中央揃え */
+}
+
+
+.picposition{
+    text-align: center; 
+    margin-top: 10px;
+}
+
+
+.pics{
+    display: flex;
+    justify-content: center; /* 画像を水平中央に配置 */
+    align-items: center; /* 画像を垂直中央に配置 */
+}
+
+.pics img {
+    width: auto; /* 幅を自動調整 */
+    height: 100%; /* 高さを親要素に合わせる */
+  }
+
+.pics {
+    width: 50%;
+    height: 80%;
+    animation: slideAnimation 10s linear infinite; /* 10秒かけてアニメーションを実行（必要に応じて時間を調整） */
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(100%); /* 初期位置（右端に移動） */
+    }
+    100% {
+      transform: translateX(-100%); /* 終了位置（左端に移動） */
+    }
+  }
+
+
+
+.pic {
+    width: 70%; 
+    height: 80%; 
+}
+
+
+
+.result{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.score-container{
+    text-align: right;
+}
+
+
+.circle {
+    width: 30px; /* 円の直径 */
+    height: 30px; /* 円の高さ */
+    background-color: white; /* 円の色 (例: 赤色) */
+    border-radius: 50%; /* 円形の形状 */
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px; /* 円内のテキストのフォントサイズ */
+    color: #fff; /* テキストの色 (白色) */
+    font-weight: bold;
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin-right: 10px; /* サークル間の間隔を調整 */
+}
+
+/* イエローサークル */
+.yellow-circle {
+    background-color: yellow; /* イエローの円 */
+    color: #000; /* テキストの色 (黒色) */
+}
+
+/* グリーンサークル */
+.green-circle {
+    background-color: green; /* グリーンの円 */
+    color: #fff; /* テキストの色 (白色) */
+}
+
+/* レッドサークル */
+.red-circle {
+    background-color: red;
+    color: #fff;
+}
